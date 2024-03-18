@@ -1,6 +1,6 @@
 from odoo import models, fields
 
-class EstatePropertyType(models.Model):
+class ExpenseTransaction(models.Model):
     _name='expense.transaction'
     _description='Transactions'
     
