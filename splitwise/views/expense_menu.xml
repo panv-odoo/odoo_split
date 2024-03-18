@@ -1,0 +1,5 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <menuitem id="root_menu" name="Expense" />
+    <menuitem id="Expense_menu" name="Dashboard" parent="root_menu" action="expense_action" />
+</odoo>
