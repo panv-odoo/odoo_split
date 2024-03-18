@@ -1,0 +1,14 @@
+<odoo>
+    <menuitem id="split_menu_root" name="Split">
+        <menuitem id="split_first_level_menu_expenses" name="Expenses">
+            <menuitem id="split_menu_action_expenses" action="split_property_action_expenses"/>
+        </menuitem>
+
+        <menuitem id="split_first_level_menu_type" name="Expense Type">
+            <menuitem id="split_menu_action_type" action="split_action_type"/>
+        </menuitem>
+    </menuitem>
+
+</odoo>
+
+
