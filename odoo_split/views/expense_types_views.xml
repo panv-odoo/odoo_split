@@ -1,0 +1,32 @@
+<odoo>
+    <record id='split_action_type' model='ir.actions.act_window'>
+        <field name='name'>Expense Types</field>
+        <field name='res_model'>expense.type</field>
+        <field name='view_mode'>tree,form</field>
+    </record>
+    <record id='split_type_view_form' model='ir.ui.view'>
+        <field name='name'>expense.type.form</field>
+        <field name='model'>expense.type</field>
+        <field name='arch' type='xml'>
+            <form>
+                <sheet>
+                    <group>
+                        <h1>
+                            <field name='name'/>
+                        </h1>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id='expense_type_view_tree' model='ir.ui.view'>
+        <field name='name'>expense.type.tree</field>
+        <field name='model'>expense.type</field>
+        <field name='arch' type='xml'>
+            <tree>
+                <field name='name'/>
+            </tree>
+        </field>
+    </record>
+</odoo>
