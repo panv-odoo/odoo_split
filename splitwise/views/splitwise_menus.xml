@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <menuitem id="splitwise_menu_root" name="splitwise" sequence="40" />
+
+    <menuitem id="splitwise_first_level_menu1" name="Splits" parent="splitwise_menu_root" sequence="1" />
+
+    <menuitem id="splitwise_menu_action1" name="Splits" parent="splitwise_first_level_menu1" action="splitwise_split_action" sequence="1" />
+    <menuitem id="splitwise_menu_action2" name="Groups" parent="splitwise_first_level_menu1" action="splitwise_groups_action" sequence="2" />
+
+</odoo>
+
+  

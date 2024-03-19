@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+splitwise.access_splitwise_split,access_splitwise_split,splitwise.model_splitwise_split,base.group_user,1,1,1,1
+splitwise.access_splitwise_groups,access_splitwise_groups,splitwise.model_splitwise_groups,base.group_user,1,1,1,1

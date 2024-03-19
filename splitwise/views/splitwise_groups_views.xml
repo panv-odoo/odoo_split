@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="splitwise_groups_view_form" model="ir.ui.view">
+        <field name="name">splitwise.groups.form</field>
+        <field name="model">splitwise.groups</field>
+        <field name="arch" type="xml">
+            <form string="Groups Form">
+                <sheet>
+                    <group>
+                        <h1>
+                            <field name="name"/>
+                        </h1>
+                        <field name="member_ids" widget="many2many_tags" options="{'color_field': 'color'}"/>
+                        <newline/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+
+
+    <record id="splitwise_groups_action" model="ir.actions.act_window">
+        <field name="name">groups</field>
+        <field name="res_model">splitwise.groups</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+</odoo>
