@@ -12,8 +12,8 @@
                 <sheet>
                     <group>
                         <field name="payer"/>
-                        <field name="payee_ids"  widget='many2many_tags'/>
-                        <field name="total_amount"/>
+                        <field name="payee_ids"  widget='many2many_tags' />
+                        <field name="amount"/>
                         <field name="description"/>
                         <field name="expense_types"/>
                     </group>
@@ -29,7 +29,7 @@
             <tree>
                 <field name="payer"/>
                 <field name="payee_ids" widget='many2many_tags'/>
-                <field name="total_amount"/>
+                <field name="amount"/>
                 <field name="description"/>
                 <field name="expense_types"/>
             </tree>

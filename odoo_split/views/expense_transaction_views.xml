@@ -1,7 +1,38 @@
 <odoo>
-    <record id="split_property_action_expenses" model="ir.actions.act_window">
+    <record id="expense_transaction_action" model="ir.actions.act_window">
         <field name="name">Transactions</field>
         <field name="res_model">expense.transaction</field>
         <field name="view_mode">tree,form</field>
     </record>
+
+    <record id='expense_group_transaction_view_form' model='ir.ui.view'>
+        <field name='name'>expense.transaction.form</field>
+        <field name='model'>expense.transaction</field>
+        <field name='arch' type='xml'>
+            <form>
+                <sheet>
+                    <group>
+                        <field name='payer'/>
+                        <field name='payee'/>
+                        <field name='amount'/>
+                        <field name='date'/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id='expense_transaction_view_tree' model='ir.ui.view'>
+        <field name='name'>expense.transaction.tree</field>
+        <field name='model'>expense.transaction</field>
+        <field name='arch' type='xml'>
+            <tree >
+                <field name='payer'/>
+                <field name='payee'/>
+                <field name='amount'/>
+                <field name='date'/>
+            </tree>
+        </field>
+    </record>
+    
 </odoo>
