@@ -5,4 +5,3 @@ class ExpenseType(models.Model):
     _description='Type of Expenses'
 
     name=fields.Char(string="Name", required=True)
-
