@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<templates xml:space="preserve">
+    <t t-name="splitwise.ExpenseRightComponentView">
+        <div class="col-3 shadow-sm">
+            <div class="d-flex flex-column mt-5" style="margin-left:35px">
+                <div>
+                YOUR BALANCE
+                </div>
+                <div class="mt-3">
+                    <span>You owe Vivek</span>
+                    <span>
+                        <h3>$4500.00</h3>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </t>
+</templates>
