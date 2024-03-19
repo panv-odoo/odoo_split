@@ -1,5 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <odoo>
-    <menuitem id="root_menu" name="Expense" />
-    <menuitem id="Expense_menu" name="Dashboard" parent="root_menu" action="expense_action" />
+    <menuitem id="root_menu" name="Spiltwise" web_icon="splitwise,static/src/img/download.png" />
+    <menuitem id="Expense_menu" name="Expenses" parent="root_menu" action="action_expense" />
+    <menuitem id="Expense_Transaction" name="Records" parent="root_menu" action="action_expense_transaction" />
+    <menuitem id="Expense_Type" name="Types" parent="root_menu" action="action_expense_types" />
 </odoo>

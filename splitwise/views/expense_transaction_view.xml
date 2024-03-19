@@ -1,0 +1,8 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <record id="action_expense_transaction" model="ir.actions.act_window">
+        <field name="name">Transactions</field>
+        <field name="res_model">expense.transaction</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+</odoo>
