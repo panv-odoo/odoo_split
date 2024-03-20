@@ -2,8 +2,7 @@
     'name': 'Odoo Split',
     'summary': 'Split your expenses',
     'depends': [
-        'base',
-        'website',
+        'base'
     ],
     'category': 'Split/Expense',
     'data' : [
@@ -11,10 +10,13 @@
 
         'views/expense_types_views.xml',
         'views/expense_transaction_views.xml',
+        'views/expense_group_transaction_views.xml',
+        'views/expense_group_views.xml',
         'views/odoo_split_menus.xml',
     ],
     'demo' : [
     ],
     'application': True,
     'installable': True,
+    'license': 'LGPL-3',
 }

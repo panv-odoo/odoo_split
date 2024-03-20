@@ -1,11 +1,16 @@
 <odoo>
 
     <menuitem id="split_menu_root" name="Split">
-        <menuitem id="split_first_level_menu_expenses" name="Expenses">
-            <menuitem id="split_menu_action_expenses" action="split_property_action_expenses" />
+        <menuitem id="split_first_level_menu_expense" name="Expenses" sequence="1">
+            <menuitem id="split_menu_action_expense" action="split_property_action_expenses" sequence="2"/>
+            <menuitem id="split_menu_action_expense_group" action="group_transaction_action" sequence="1"/>
         </menuitem>
 
-        <menuitem id="split_first_level_menu_type" name="Expense Type">
+        <menuitem id="split_first_level_menu_group" name="Create Group" sequence="2">
+            <menuitem id="split_menu_action_group" action="expense_action_group"/>
+        </menuitem>
+
+        <menuitem id="split_first_level_menu_type" name="Expense Type" sequence="3">
             <menuitem id="split_menu_action_type" action="split_action_type" />
         </menuitem>
     </menuitem>

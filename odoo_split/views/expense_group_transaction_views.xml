@@ -1,0 +1,44 @@
+<odoo>
+  <record id='group_transaction_action' model='ir.actions.act_window'>
+    <field name='name'>Group Transaction</field>
+    <field name='res_model'>expense.group.transaction</field>
+    <field name='view_mode'>tree,form</field>
+  </record>
+  <record id='expense_group_transaction_view_form' model='ir.ui.view'>
+    <field name='name'>expense.group.transaction.form</field>
+    <field name='model'>expense.group.transaction</field>
+    <field name='arch' type='xml'>
+      <form>
+        <sheet>
+          <group>
+            <group>
+              <field name="total_amount" />
+              <field name="group_id" />
+              <field name="payer" />
+              <field name="payee_ids" widget='many2many_tags' />
+              <field name="expense_types" />
+              <field name="description" />
+            </group>
+            <group>
+              <field name="amount_per_head" /> per head
+            </group>
+          </group>
+        </sheet>
+      </form>
+    </field>
+  </record>
+
+  <record id='expense_group_transaction_view_tree' model='ir.ui.view'>
+    <field name='name'>expense.group.transaction.tree</field>
+    <field name='model'>expense.group.transaction</field>
+    <field name='arch' type='xml'>
+      <tree>
+        <field name="payer" />
+        <field name="payee_ids" widget='many2many_tags' />
+        <field name="total_amount" />
+        <field name="description" />
+        <field name="expense_types" />
+      </tree>
+    </field>
+  </record>
+</odoo>
