@@ -4,4 +4,34 @@
         <field name="res_model">expense.transaction</field>
         <field name="view_mode">tree,form</field>
     </record>
+
+    <record id="expense_transaction_view_form" model="ir.ui.view">
+        <field name="name">expense.transaction.view.form</field>
+        <field name="model">expense.transaction</field>
+        <field name="arch" type="xml">
+            <form string="Expense Form">
+                <sheet>
+                    <group>
+                        <field name="amount" />
+                        <field name="payor_id" />
+                        <field name="payee_id" />
+                        <field name="state" />
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="expense_transaction_view_tree" model="ir.ui.view">
+        <field name="name">expense.transactionview.tree</field>
+        <field name="model">expense.transaction</field>
+        <field name="arch" type="xml">
+            <tree string="">
+                <field name="payor_id" />
+                <field name="payee_id" />
+                <field name="amount" />
+                <field name="state" />
+            </tree>
+        </field>
+    </record>
 </odoo>

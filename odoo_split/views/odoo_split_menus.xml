@@ -1,17 +1,17 @@
 <odoo>
 
-    <menuitem id="split_menu_root" name="Split">
+    <menuitem id="split_menu_root" name="Split" web_icon="odoo_split,static/description/icon.png" >
         <menuitem id="split_first_level_menu_expense" name="Expenses" sequence="1">
-            <menuitem id="split_menu_action_expense" action="split_property_action_expenses" sequence="2"/>
-            <menuitem id="split_menu_action_expense_group" action="group_transaction_action" sequence="1"/>
+            <menuitem id="split_menu_action_expense" name="Expense" action="split_property_action_expenses" sequence="2"/>
+            <menuitem id="split_menu_action_expense_group" name="Group Expense" action="group_transaction_action" sequence="1"/>
         </menuitem>
 
-        <menuitem id="split_first_level_menu_group" name="Create Group" sequence="2">
-            <menuitem id="split_menu_action_group" action="expense_action_group"/>
+        <menuitem id="split_first_level_menu_group" name="Group" sequence="2">
+            <menuitem id="split_menu_action_group" name="Group" action="expense_action_group"/>
         </menuitem>
 
-        <menuitem id="split_first_level_menu_type" name="Expense Type" sequence="3">
-            <menuitem id="split_menu_action_type" action="split_action_type" />
+        <menuitem id="split_first_level_menu_type" name="Configuration" sequence="3">
+            <menuitem id="split_menu_action_type" name="Expense Type" action="split_action_type" />
         </menuitem>
     </menuitem>
 

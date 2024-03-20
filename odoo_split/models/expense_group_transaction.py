@@ -3,11 +3,12 @@ from odoo import models, fields, api
 
 class ExpenseGroupTransaction(models.Model):
     _name='expense.group.transaction'
-    _description='Group Transactions'
+    _description='Group Expense'
 
-    group_id = fields.Many2one('expense.group', required=True)
-    payee_ids = fields.Many2many('res.users', string="With you and: " ,compute='_compute_payee_ids',store=True,)
-    payer = fields.Many2one('res.users', required=True, string='Payer', default=lambda self: self.env.user)
+    group_id = fields.Many2one('expense.group')
+    is_group_exp = fields.Boolean('is Group Expense ')
+    payee_ids = fields.Many2many('res.users', string="Payees" ,compute='_compute_payee_ids',store=True,readonly=False)
+    payor = fields.Many2one('res.users', required=True, string='Payor', default=lambda self: self.env.user)
     total_amount = fields.Float(string="Amount", required=True,default=0.00)
     description = fields.Text(string="Description", required=True)
     expense_types = fields.Many2one('expense.type', string="Type of Expense")
@@ -23,7 +24,7 @@ class ExpenseGroupTransaction(models.Model):
       for expense in self:
         expense.payee_ids = expense.group_id.member_ids
         
-    @api.depends('total_amount','description','payee_ids','group_id')
+    @api.depends('total_amount','description')
     def _compute_display_name(self):
       if self.total_amount:
         for record in self:
@@ -32,8 +33,6 @@ class ExpenseGroupTransaction(models.Model):
           else:
             description = record.description
           record.display_name = '₹ '+ str(record.total_amount) + ' : ' + description
-          
-          
       else:
         self.display_name = ''
         

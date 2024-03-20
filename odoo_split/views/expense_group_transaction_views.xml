@@ -13,8 +13,9 @@
           <group>
             <group>
               <field name="total_amount" />
-              <field name="group_id" />
-              <field name="payer" />
+              <field name="is_group_exp" />
+              <field name="group_id"  invisible="not is_group_exp"/>
+              <field name="payor" />
               <field name="payee_ids" widget='many2many_tags' />
               <field name="expense_types" />
               <field name="description" />
@@ -33,11 +34,11 @@
     <field name='model'>expense.group.transaction</field>
     <field name='arch' type='xml'>
       <tree>
-        <field name="payer" />
+        <field name="payor" />
         <field name="payee_ids" widget='many2many_tags' />
         <field name="total_amount" />
-        <field name="description" />
         <field name="expense_types" />
+        <field name="description" />
       </tree>
     </field>
   </record>
