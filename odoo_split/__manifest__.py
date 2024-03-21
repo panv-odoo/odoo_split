@@ -1,14 +1,13 @@
 {
     'name': 'Odoo Split',
-    'version': '0.1',
+    'version': '1.0',
     'summary': 'Split your expenses',
-    'depends': [
-        'base','web'
-    ],
+    'depends': ['base', 'web'],
     'category': 'Split/Expense',
     'data' : [
         'security/ir.model.access.csv',
 
+        'views/expense_templates.xml',
         'views/expense_types_views.xml',
         'views/expense_transaction_views.xml',
         'views/expense_group_transaction_views.xml',

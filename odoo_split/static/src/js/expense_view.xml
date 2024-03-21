@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+    <t t-name="odoo_split.ExpenseView">
+        <ExpenseHeader />
+
+        <div class="container">
+            <div class="row">
+              <!-- left component for contact -->
+              <Contact />
+
+              <!-- middle component to show all respective transaction -->
+              <Transaction/>
+
+              <!-- right component for person balance -->
+              <Balance/>
+            </div>
+        </div>
+    </t>
+</templates>
