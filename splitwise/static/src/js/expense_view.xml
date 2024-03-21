@@ -2,7 +2,6 @@
 <templates xml:space="preserve">
     <t t-name="splitwise.ExpenseView">
         <ExpenseHeaderView />
-
         <div class="container">
             <div class="row">
                 <ExpenseLeftComponentView />

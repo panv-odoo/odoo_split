@@ -4,12 +4,16 @@
         <div class="col-3 shadow-sm">
             <div class="d-flex flex-column mt-5" style="margin-left:35px">
                 <div>
-                YOUR BALANCE
+                    <h3>
+                    YOUR BALANCE
+                    </h3>
                 </div>
                 <div class="mt-3">
-                    <span>You owe Vivek</span>
                     <span>
-                        <h3>$4500.00</h3>
+                        <h3>You owe Vivek</h3>
+                    </span>
+                    <span>
+                        <h1>$4500.00</h1>
                     </span>
                 </div>
             </div>

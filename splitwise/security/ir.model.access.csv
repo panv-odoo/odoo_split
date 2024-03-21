@@ -2,3 +2,5 @@ id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
 access_expense_model,access.expense.model,model_expense_model,,1,1,1,1
 access_expense_transaction,access.expense.transaction,model_expense_transaction,,1,1,1,1
 access_expense_type,access.expense.type,model_expense_type,,1,1,1,1
+access_expense_group,access.expense.group,model_expense_group,,1,1,1,1
+access_expense_group_transaction,access.expense.group.transaction,model_expense_group_transaction,,1,1,1,1

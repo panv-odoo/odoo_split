@@ -3,5 +3,7 @@
 
 from . import expense_model
 from . import expense_transaction
+from . import expense_group
+from . import expense_group_transaction
 from . import expense_type
 from . import users

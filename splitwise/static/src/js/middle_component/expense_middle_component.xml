@@ -5,9 +5,9 @@
             <main class="container">
                 <div class="d-flex align-items-center p-3 my-3 text-white bg-purple rounded shadow-sm border">
                     <div class="lh-1 w-100 d-flex" style="justify-content: space-between">
-                        <div class="d-flex gap-3" style="align-item:center; justify-content: space-between;">
-                            <img height="32" src="estate/static/description/icon.png" />
-                            <h1 class="h3 mb-0 text-black lh-1">Vivek Panchal</h1>
+                        <div class="d-flex gap-3" style="justify-content: space-between;">
+                            <img height="32" src="splitwise/static/src/img/download.png" />
+                            <h1 class="h2 mb-0 text-black lh-1 d-flex" style="align-items:center">Vivek Panchal</h1>
                         </div>
                         <div class="d-flex gap-3">
                             <button class="btn btn-outline-danger">Add an expenses</button>
@@ -25,7 +25,7 @@
                                 <span>19</span>
                             </span>
                             <span>
-                                <img height="32" src="estate/static/description/icon.png" />
+                                <img height="32" src="splitwise/static/src/img/download.png" />
                             </span>
                             <span class="fs-4">Demo</span>
                         </div>
@@ -56,7 +56,7 @@
                                 <span>16</span>
                             </span>
                             <span>
-                                <img height="32" src="estate/static/description/icon.png" />
+                                <img height="32" src="splitwise/static/src/img/download.png" />
                             </span>
                             <span class="fs-4">Food</span>
                         </div>

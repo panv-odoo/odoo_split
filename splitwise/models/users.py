@@ -6,4 +6,4 @@ from odoo import api,fields,models
 class ResUsers(models.Model):
     _inherit = 'res.users'
 
-    balance = fields.Float(string = "Balance")
+    group_ids = fields.Many2many('expense.group')

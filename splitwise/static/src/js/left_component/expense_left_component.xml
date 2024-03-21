@@ -4,7 +4,7 @@
         <div class="col-3 shadow-sm">
             <div class="d-flex flex-column">
                 <div class="d-flex" style="background-color:#d5dee3">
-                    <div class="w-50 d-flex border cursor-pointer">
+                    <div class="w-50 d-flex border cursor-pointer" t-on-click="getExpenses">
                         <span class="fw-normal font-monospace" style="justify-content:center; align-items:center; margin:10px auto">Friends</span>
                     </div>
                     <div class="w-50 d-flex border cursor-pointer">

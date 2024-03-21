@@ -13,26 +13,23 @@
         'views/expense_templete.xml',
         'views/expense_menu.xml',
     ],
-    'assets' : {
-        'splitwise.assets_expense': [
-            # bootstrap
-            ('include', 'web._assets_helpers'),
-            'web/static/src/scss/pre_variables.scss',
-            'web/static/lib/bootstrap/scss/_variables.scss',
-            ('include', 'web._assets_bootstrap_backend'),
+    'assets': {
+        'splitwise.assets_splitwise': [
 
-            # required for fa icons
-            'web/static/src/libs/fontawesome/css/font-awesome.css',
-            
-            # include base files from framework
-            ('include', 'web._assets_core'),
+            #2 Load frontend variables
+            ("include", "web._assets_helpers"),
+            ("include", "web._assets_frontend_helpers"),
+            ("include", "web._assets_primary_variables"),
+            "web/static/src/scss/pre_variables.scss",
 
-            'web/static/src/core/utils/functions.js',
-            'web/static/src/core/browser/browser.js',
-            'web/static/src/core/registry.js',
-            'web/static/src/core/assets.js',
-            'splitwise/static/src/js/**/*',
+            #3 Load Bootstrap and frontend bundles
+            "web/static/lib/bootstrap/scss/_functions.scss",
+            "web/static/lib/bootstrap/scss/_variables.scss",
+            ("include", "web._assets_bootstrap_frontend"),
+
+            'splitwise/static/src/**/*',
         ],
+
     },
     'author': "Odoo",
     'sequence':'1',
