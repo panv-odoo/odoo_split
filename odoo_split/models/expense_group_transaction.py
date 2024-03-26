@@ -1,4 +1,4 @@
-from traitlets import default
+# from traitlets import default
 from odoo import models, fields, api
 
 class ExpenseGroupTransaction(models.Model):

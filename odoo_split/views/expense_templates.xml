@@ -4,10 +4,12 @@
             <html>
                 <head>
                     <link type="image/x-icon" rel="shortcut icon" href="/web/static/img/favicon.ico" />
-                    <t t-call-assets="odoo_split.assets_expense" />
+                    <t t-call-assets="web.assets_frontend" />
+                    <link rel="manifest" href="/split/manifest.webmanifest"/>
                 </head>
 
                 <body>
+                    <owl-component name="odoo_split.mysplits"/>
                 </body>
             </html>
         </template>
