@@ -13,10 +13,13 @@ const SalesOrderSnippet = publicWidget.Widget.extend({
   start: async function () {
     let tbody = this.el.querySelector("tbody");
     let showConfirm = this.target.dataset.showConfirm;
+    let id = 1;
 
     // Fetching data
-    let data = await this.rpc("/getSalesOrders");
-
+    let data = await this.rpc("/getSalesOrders/", {
+      show_all: showConfirm,
+    });
+    debugger;
     let filteredData;
     if (showConfirm) {
       filteredData = data.filter((order) => order.state === "sale");
@@ -26,25 +29,31 @@ const SalesOrderSnippet = publicWidget.Widget.extend({
 
     // Map filtered data to orders array
     const orders = filteredData.map((order) => ({
+      id: id++,
       name: order.name,
       partnerName: order.partner_id[1],
       status: order.state,
     }));
 
-    // Generate HTML for orders
-    let htmlEl = "";
-    let id = 1;
-    orders.forEach((data) => {
-      htmlEl += `<tr>
-        <td>${id++}</td>
-        <td>${data.name}</td>
-        <td>${data.partnerName}</td>
-        <td>${data.status}</td>
-      </tr>`;
+    const renderDetailsEl = renderToElement("s_sales_order_snippet", {
+      orders: orders,
     });
+    document.querySelector("#table_body_id").replaceChildren(renderDetailsEl);
+
+    // Generate HTML for orders
+    // let htmlEl = "";
+    // let id = 1;
+    // orders.forEach((data) => {
+    //   htmlEl += `<tr>
+    //     <td>${id++}</td>
+    //     <td>${data.name}</td>
+    //     <td>${data.partnerName}</td>
+    //     <td>${data.status}</td>
+    //   </tr>`;
+    // });
 
     // Update table body with HTML
-    tbody.innerHTML = htmlEl;
+    // tbody.innerHTML = htmlEl;
   },
 });
 

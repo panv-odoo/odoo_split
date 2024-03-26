@@ -17,6 +17,6 @@
         data-attribute-name="showConfirm" data-select-data-attribute="true"
         data-toggle-option="true" />
     </div>
-  </xpath>\
+  </xpath>
   </template>
 </odoo>
