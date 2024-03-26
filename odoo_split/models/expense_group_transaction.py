@@ -1,4 +1,3 @@
-from traitlets import default
 from odoo import models, fields, api
 
 class ExpenseGroupTransaction(models.Model):
@@ -18,6 +17,17 @@ class ExpenseGroupTransaction(models.Model):
         selection=[('pending', 'Pending'), ('settled', 'Settled')],
     )
     amount_per_head = fields.Float('Split Share',compute='_compute_amount_per_head')
+
+    @api.model
+    def create(self,val):
+      for id in self.payee_ids:
+        print('hello'.center(150,'='))
+        self.env['expense.transaction'].sudo().create({
+          'payor_id':self.payor,
+          'payee_id':id,
+          'amount':self.amount_per_head
+        })
+      return super().create(val)
 
     @api.depends('group_id')
     def _compute_payee_ids(self):

@@ -5,3 +5,4 @@ class ResUsers(models.Model):
 
     group_ids = fields.Many2many('expense.group')
     balance = fields.Float('Balance',default=0.00)
+    
