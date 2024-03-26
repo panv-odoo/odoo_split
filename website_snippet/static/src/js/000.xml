@@ -1,0 +1,26 @@
+<templates>
+  <t t-name="s_sales_order_snippet">
+    <section>
+      <h1>Sales Orders</h1>
+      <table class="table" >
+        <thead>
+          <tr>
+            <th>Order Number</th>
+            <th>Customer Name</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Loop through each sale order and display its details -->
+          <t t-foreach="orders" t-as="order">
+            <tr>
+              <td><t t-esc="order.name"/></td>
+              <td><t t-esc="order.partnerName"/></td>
+              <td><t t-esc="order.status"/></td>
+            </tr>
+          </t>
+        </tbody>
+      </table>
+    </section>
+  </t>
+</templates>

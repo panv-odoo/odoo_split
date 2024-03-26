@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+  <template id="external_snippets" inherit_id="website.snippets">
+    <xpath expr="//div[@id='snippet_effect']/div[hasclass('o_panel_body')]" position="inside">
+      <t t-snippet="website_snippet.s_sales_order_snippet"
+        t-thumbnail="/website/static/src/img/snippets_thumbs/s_banner.svg">
+        <keywords>sales , order</keywords>
+      </t>
+    </xpath>
+  </template>
+
+  <template id="external_snippets_options" inherit_id="website.snippet_options">
+  <xpath expr="." position="inside">
+    <div data-selector=".s_sales_order_snippet">
+      <we-checkbox string="Show confirm orders" data-no-preview="true" data-show-confirm="true"
+        data-attribute-name="showConfirm" data-select-data-attribute="true"
+        data-toggle-option="true" />
+    </div>
+  </xpath>\
+  </template>
+</odoo>
