@@ -1,7 +1,7 @@
 <templates>
   <t t-name="s_sales_order_snippet">
       <!-- Loop through each sale order and display its details -->
-      <table class="table table-striped table-bordered">
+      <table t-if="orders" class="table table-striped table-bordered">
         <thead class="thead-dark">
           <tr>
             <th scope="col">Sr no.</th>
@@ -11,15 +11,14 @@
           </tr>
         </thead>
         <tbody >
-          <t t-foreach="orders" t-as="order" t-key="order.id">
+          <t t-foreach="orders" t-as="order" t-key="order_index">
             <tr>
-              <td><t t-esc="order.id"/></td>
+              <td><t t-esc="order_index+1"/></td>
               <td><t t-esc="order.name"/></td>
-              <td><t t-esc="order.partnerName"/></td>
-              <td><t t-esc="order.status"/></td>
+              <td><t t-esc="order.partner_id[1]"/></td>
+              <td><t t-esc="order.state"/></td>
             </tr>
           </t>
-          <!-- Add more rows dynamically -->
         </tbody>
       </table>
   </t>

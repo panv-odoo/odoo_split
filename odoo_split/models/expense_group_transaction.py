@@ -19,16 +19,19 @@ class ExpenseGroupTransaction(models.Model):
     amount_per_head = fields.Float('Split Share',compute='_compute_amount_per_head')
 
     @api.model
-    def create(self,val):
-      for id in self.payee_ids:
-        print('hello'.center(150,'='))
-        self.env['expense.transaction'].sudo().create({
-          'payor_id':self.payor,
-          'payee_id':id,
-          'amount':self.amount_per_head
-        })
-      return super().create(val)
-
+    def create(self, vals):
+      record = super(ExpenseGroupTransaction, self).create(vals)
+      # Create expense transactions for each payee
+      expense_transaction_obj = self.env['expense.transaction']
+      for payee in record.payee_ids:
+          expense_transaction_obj.create({
+              'payor_id': record.payor.id,
+              'payee_id': payee.id,
+              'amount': record.amount_per_head,
+              'is_group_expense': True,  # Indicate it's a group expense
+          })
+      return record
+    
     @api.depends('group_id')
     def _compute_payee_ids(self):
       for expense in self:
