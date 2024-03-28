@@ -24,6 +24,11 @@
               <field name="amount_per_head" /> per head
             </group>
           </group>
+          <notebook>
+            <page string="Transactions">
+              <field name="transaction_ids" />
+            </page>
+          </notebook>
         </sheet>
       </form>
     </field>

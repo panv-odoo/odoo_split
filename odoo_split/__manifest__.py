@@ -12,6 +12,7 @@
         'views/expense_transaction_views.xml',
         'views/expense_group_transaction_views.xml',
         'views/expense_group_views.xml',
+        'views/resuser_views.xml',
         'views/odoo_split_menus.xml',
     ],
     'demo' : [

@@ -17,6 +17,7 @@ class ExpenseGroupTransaction(models.Model):
         selection=[('pending', 'Pending'), ('settled', 'Settled')],
     )
     amount_per_head = fields.Float('Split Share',compute='_compute_amount_per_head')
+    transaction_ids = fields.One2many('expense.transaction','group_trans_id',readonly=True)
 
     @api.model
     def create(self, vals):
@@ -25,10 +26,10 @@ class ExpenseGroupTransaction(models.Model):
       expense_transaction_obj = self.env['expense.transaction']
       for payee in record.payee_ids:
           expense_transaction_obj.create({
-              'payor_id': record.payor.id,
-              'payee_id': payee.id,
+              'payor_id': payee.id,
+              'payee_id': record.payor.id,
               'amount': record.amount_per_head,
-              'is_group_expense': True,  # Indicate it's a group expense
+              'group_trans_id': record.id
           })
       return record
     

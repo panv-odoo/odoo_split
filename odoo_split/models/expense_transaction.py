@@ -15,3 +15,4 @@ class ExpenseTransaction(models.Model):
         default="pending"
     )
     is_group_expense = fields.Boolean()
+    group_trans_id = fields.Many2one('expense.group.transaction', string='Reference')
